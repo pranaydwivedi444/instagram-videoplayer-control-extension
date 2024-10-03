@@ -1,0 +1,26 @@
+{
+    "manifest_version" : 3,
+    "name" : "insta-player-video-visble",
+    "description" : "make instagram videoplayer visible controls",
+    "version" : "1.0",
+    "action" : {
+        "default_popup" : "popup/popup.html"
+    },
+   "content_scripts": [
+    {
+        "matches": [
+            "https://www.instagram.com/*"
+        ],
+        "js": [
+            "content.js"
+        ],
+        "run-at": "document-end"
+    }
+],
+    "permissions" : [
+        "storage",
+        "nativeMessaging",
+        "activeTab",
+        "tabs"
+    ]
+}
